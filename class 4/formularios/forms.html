@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/HTML lesson/class 2/etiquetas (head)/favicon/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios Practice</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">FORMULARIO</h1>
+    <hr>
+    <form action="envio.php" method="POST" target="_blank"> <!--EJEMPLO DE ENVIO AL BACKEND-->
+        <!--
+        <input type="tipo" id="identificador" size="tamaño" name="nombre" value="texto por defecto"/>}
+        -->
+
+
+        <!--name: LO QUE SE ENVIA; value: VALOR POR DEFECTO-->
+        <input type="text" id="usuario" name="usuario" value="Arturo Silvera" readonly>
+        <!--Con placeholder-->
+        <br><br>
+        <!--TEXT-->
+        <label for="usuario">Usuario: </label>
+        <input type="text" id="usuario" name="usuario" placeholder="Escribe usuario" maxlength="10" minlength="2" pattern="[A-Za-z]{9}"/><!--PARA EVITAR LOS CARACTERES ESPECIALES-->
+        <small>Debe tener 9 caracteres</small>
+        <br><br>
+        <!--EN CASO YA ESTÉ REGISTRADO EL USUARIO-->
+        <label for="usuario">Usuario: </label>
+        <input type="text" id="usuario" name="usuario" value="Arturo Silvera" readonly />
+        <br><br>
+
+        <!--PASSWORD-->
+        <label for="password">Password: </label>
+        <input type="password" id="Password" name="Password" placeholder="Digite su contraseña" />
+        <br><br>
+
+        <!--CHECKBOX Y RADIO-->
+        <input type="checkbox" id="condiciones" name="condiciones" /> ¿Está de acuerdo con las condiciones del contrato?
+        <br><br>
+        <input type="checkbox" value="HTML" name="lenguajes" /> HTML
+        <input type="checkbox" value="css" name="lenguajes" /> css
+        <input type="checkbox" value="JS" name="lenguajes" /> JS
+        <input type="checkbox" value="REACT" name="lenguajes" /> REACT
+        <!--Para que solo seleccione uno--> <!--EL "NAME" en el caso del radio, es lo que diferencia a ciertos grupos-->
+        <br><br>
+        <h2>Sección lenguajes</h2>
+        <input type="radio" value="HTML" name="lenguajes" /> HTML
+        <input type="radio" value="css" name="lenguajes" /> css
+        <input type="radio" value="JS" name="lenguajes" /> JS
+        <input type="radio" value="REACT" name="lenguajes" /> REACT
+        <br>
+        <h2>Seccion deportes</h2>
+        <input type="radio" value="futbol" name="deportes" required/> futbol
+        <input type="radio" value="voley" name="deportes" required/> voley
+        <input type="radio" value="basquet" name="deportes" required/> basquet
+        <input type="radio" value="golf" name="deportes" required/> golf
+
+        <!--NUMEROS-->
+        <br><br>
+        <label for="programando">Años programando: </label>
+        <input type="number" id="programando" name="programando" placeholder="Años programando " max="10" min="-10"/>
+
+        <!--ARCHIVOS-->
+        <br><br>
+        <label for="archivo">Archivo: </label>
+        <input type="file" id="archivo" name="archivo" value="file" multiple/><!--MULTIPLE: SELECCIONAR MAS DE 1 ARCHIVO-->
+
+        <!--TextArea-->
+        <br><br>
+        <label for="opinion">Opinion: </label>
+        <textarea id="opinion" name="opinion" rows="10" cols="10"
+            placeholder="Por favor escribe una opinion"></textarea>
+
+        <!--SELECT-->
+        <br><br>
+        <label for="pais">Pais origen: </label>
+        <select id="pais" name="pais">
+            <optgroup label="2018">
+                <option value="Francia">Francia</option>
+                <option value="Croacia">Croacia</option>
+                <option value="Belgica">Belgica</option>
+                <option value="Inglaterra" selected="selected">Inglaterra</option><!--POR DEFECTO: selected-->
+            </optgroup>
+            <optgroup label="2014">
+                <option value="Alemania">Alemania</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Paises Bajos">Paises Bajos</option>
+                <option value="Brasil" selected="selected">Brasil</option><!--POR DEFECTO: selected-->
+            </optgroup>
+        </select>
+        <hr>
+        <!--FECHA-->
+        <label for="fecha">Selecciona fecha de ingreso: </label>
+        <input type="date" id="fecha" name="fecha" value="2024-02-24" max="2024-02-24"/>
+
+        <br><br>
+        <!--EJEMPLO DE REQUIRED-->
+        <label for="usuario">Usuario: </label>
+        <input type="text" id="usuario" name="usuario" required/>
+        <small>Es obligatorio este campo</small>
+        <!--EL REQUIRED se suele usar más en javascript, ya que en html es fácil manipular el codigo fuente en un navegador-->
+
+        <br><br>
+        <!--EMAIL-->
+        <label for="email">Gmail: </label>
+        <input type="email" id="email" name="email" placeholder="Escribi el email" required/>
+        <small>Es obligatorio este campo</small>
+
+        <br><br>
+        <!--FORMS DE ENVIO y RESETEO-->
+        <input type="submit" value="Envia tus datos">
+        <input type="reset" value="Resetea form">
+
+        <!--BUTTON-->
+        <br><br>
+        <!--1ERA FORMA-->
+        <input type="button" onclick="for(let i=0; i<3;i++){alert(i);};" value="Saludar por favor">
+        <!--2DA FORMA, SE USA PARA EL BACKEND-->
+        <br><br>
+        <button onclick="alert('ENVIO')">ENVIO</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/HTML lesson/class 2/etiquetas (head)/favicon/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera pagina web</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(200, 200, 200);
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+        td{
+            border: 1px solid rgb(190,190,190);
+            padding: 10px 20px;
+            text-align: center;  
+        }
+        th{
+            border: 1px solid rgb(190,190,190);
+            padding: 10px 20px;
+            background-color: rgb(102, 102, 102);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tabla de mis alumnos</h1>
+    <hr>
+    <!--TR: FILA; TD: COLUMNA-->
+    <table>
+
+        <!--PARA PERSONALIZAR COLUMNA POR COLUMNA-->
+        <colgroup>
+            <col style="background-color: rgb(214, 214, 214);">
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <th>&nbsp;</th>
+            <th>Pedro</th>
+            <th>Lucas</th>
+            <th>Maria</th>
+            <th>Yanneth</th>
+        </tr>
+        <tr>
+            <td>Edad</td>
+            <td>13</td>
+            <td>17</td>
+            <td>19</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Materia</td>
+            <td>React</td>
+            <td>JS</td>
+            <td>HTML</td>
+            <td>CSS</td>
+        </tr>  <!--duplicar linea: SHIFT + ALT + ABAJO-->       
+        <tr>
+            <td>Promedio</td>
+            <td>8</td>
+            <td>10</td>
+            <td>10</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Aprobado</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+        </tr>
+        <tr>
+            <td>Años cursados</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+</body>
+
+</html>
